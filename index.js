@@ -151,9 +151,9 @@ bot.on('callback_query', async (query) => {
       `👥 Для: *${d.forWhom}*\n` +
       `⏰ Час: *${d.time}*\n\n` +
       'Консультант зателефонує у зазначений час. До зустрічі! 🤝\n\n' +
-     '_[Speak Up](https://speak\-up\.com\.ua) — The New School Generation_',
+     '_Speak Up — The New School Generation_',
       {
-        parse_mode: 'MarkdownV2',
+        parse_mode: 'Markdown',
         disable_web_page_preview: true,
         reply_markup: { inline_keyboard: [[{ text: '🔄 Ще одна заявка', callback_data: 'start' }]] }
       }
