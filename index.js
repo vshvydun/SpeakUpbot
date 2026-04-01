@@ -33,13 +33,12 @@ function getSession(id) {
 // ── Відправка ліда в KeyCRM ────────────────────────
 async function sendToKeyCRM(data) {
   const body = JSON.stringify({
-    buyer: {
+    contact: {
       full_name: data.name,
       phone:     data.phone,
     },
     manager_comment:
       `Рівень: ${data.level} | Для: ${data.forWhom} | Час дзвінка: ${data.time} | Джерело: Telegram бот`,
-    source_id: 1
   });
 
   return new Promise((resolve) => {
@@ -48,8 +47,8 @@ async function sendToKeyCRM(data) {
       path:     '/v1/leads',
       method:   'POST',
       headers: {
-        'Authorization': `Bearer ${CRM_TOKEN}`,
-        'Content-Type':  'application/json',
+        'Authorization':  `Bearer ${CRM_TOKEN}`,
+        'Content-Type':   'application/json',
         'Content-Length': Buffer.byteLength(body)
       }
     }, (res) => {
