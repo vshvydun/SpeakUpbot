@@ -76,6 +76,7 @@ bot.onText(/\/start/, (msg) => {
     'Натисніть кнопку нижче, щоб розпочати:',
     {
       parse_mode: 'Markdown',
+      disable_web_page_preview: true,
       reply_markup: { inline_keyboard: [[{ text: '📚 Розпочати навчання', callback_data: 'start' }]] }
     }
   );
