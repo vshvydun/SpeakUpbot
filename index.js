@@ -71,7 +71,7 @@ bot.onText(/\/start/, (msg) => {
   sessions[id] = { step: 'idle', data: {} };
   bot.sendMessage(id,
     '👋 *Вітаємо в Speak-Up English School!*\n\n' +
-    'Ми — школа англійської мови *speak-up.com.ua*.\n' +
+    'Ми — школа англійської мови [Speak-Up](https://speak-up.com.ua).\n' +
     'Допоможемо досягти впевненості в англійській — від нуля до вільного спілкування! 🚀\n\n' +
     'Натисніть кнопку нижче, щоб розпочати:',
     {
@@ -150,7 +150,7 @@ bot.on('callback_query', async (query) => {
       `👥 Для: *${d.forWhom}*\n` +
       `⏰ Час: *${d.time}*\n\n` +
       'Консультант зателефонує у зазначений час. До зустрічі! 🤝\n\n' +
-      '_Speak-Up.com.ua — English for Life_',
+      '_[Speak Up](https://speak-up.com.ua) — The New School Generation_',
       {
         parse_mode: 'Markdown',
         reply_markup: { inline_keyboard: [[{ text: '🔄 Ще одна заявка', callback_data: 'start' }]] }
